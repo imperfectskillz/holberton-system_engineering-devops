@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -maP
+ls -map
