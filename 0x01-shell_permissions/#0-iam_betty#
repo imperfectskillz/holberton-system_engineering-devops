@@ -1,0 +1,17 @@
+vagrant@vagrant-ubuntu-trusty-64:~/holberton-system_engineering-devops/0x01-shell_permissions$ git commit -m "0"
+[master 5b6c325]  file changed, 1 insertion(+)
+vagrant@vagrant-ubuntu-trusty-64:~/holberton-system_engineering-devops/0x01-shell_permissions$ git push
+Username for 'https://github.com': imperfectskillz
+File Edit Options Buffers Tools Sh-Script Help
+#!/bin/bash
+sudo betty
+
+
+
+
+
+
+
+
+#!/bin/bash
+sudo betty
