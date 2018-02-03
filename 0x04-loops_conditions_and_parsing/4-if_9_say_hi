@@ -2,7 +2,7 @@
 #use while loop and if
 
 i=1
-while [ $i -lt 10 ]
+while [ $i -lt 11 ]
 do
 	echo "Holberton School"
 	if [ $i -eq 9 ]
