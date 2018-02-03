@@ -12,5 +12,5 @@ do
 		   	;;
 		17) echo "bad luck from Italy"
 	esac
-	let i += 1
+	let i+=1
 done

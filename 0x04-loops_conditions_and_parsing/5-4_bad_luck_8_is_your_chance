@@ -13,5 +13,5 @@ do
 	else
 		echo "Holberton School"
 	fi
-	let i += 1
+	let i+=1
 done

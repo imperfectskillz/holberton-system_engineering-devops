@@ -9,5 +9,5 @@ do
 	then
 		echo "Hi"
 	fi
-	let i += 1
+	let i+=1
 done
