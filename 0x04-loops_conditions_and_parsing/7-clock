@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 #while loop prints time
 
-h=1
+h=0
 while [ $h -lt 13 ]
 do
 	echo Hour: $h
