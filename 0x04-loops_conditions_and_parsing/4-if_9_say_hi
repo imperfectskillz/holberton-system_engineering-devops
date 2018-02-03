@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+#use while loop and if
+
+i=1
+while [ $i -lt 10 ]
+do
+	echo "Holberton School"
+	if [ $i -eq 9 ]
+	then
+		echo "Hi"
+	fi
+	let i += 1
+done

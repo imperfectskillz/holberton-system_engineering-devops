@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+#use until to print
+
+i=10
+until [ $i -lt 1 ]
+do
+	echo "Holberton School"
+	let i -= 1
+done 

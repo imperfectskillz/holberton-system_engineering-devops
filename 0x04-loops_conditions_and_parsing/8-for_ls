@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+#removes file prefixes
+
+for f in *
+do
+	echo "$f" | cut -d "-" f2
+done
