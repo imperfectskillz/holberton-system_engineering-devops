@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#using ps afux with grep
+# shellcheck disable=SC2009
+ps afux | grep bash

@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+#using ps afux with grep
+ps afux | grep bash

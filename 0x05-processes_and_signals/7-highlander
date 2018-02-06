@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#prints I am invincible receives sigterm
+echo "To infinity and beyond"
+sleep 2
