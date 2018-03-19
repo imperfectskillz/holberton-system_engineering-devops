@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+#configuring ssh client
+
+PasswordAuthentication no
+IdentityFile ~/.ssh/holberton
