@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
-#debugs server
-sed -i 's/8080/80' /etc/nginx/sites-enabled/default
+#debugs server with help from stackoverflow
+rm /etc/nginx/sites-enabled/default
+ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
 sudo service nginx restart
