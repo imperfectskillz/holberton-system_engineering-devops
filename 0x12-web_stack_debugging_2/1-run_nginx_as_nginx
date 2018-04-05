@@ -5,5 +5,5 @@ pkill apache2
 service apache2 stop
 sed -i "s/80/8080/" /etc/nginx/sites-enabled/default
 sed -i "4iuser nginx;" /etc/nginx/nginx.conf
-chmod u+rx /etc/nginx/nginx.conf
+chmod -R 777 /etc/nginx/nginx.conf
 sudo -u nginx service nginx restart
