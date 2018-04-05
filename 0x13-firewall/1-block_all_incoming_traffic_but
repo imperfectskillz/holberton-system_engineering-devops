@@ -1,0 +1,7 @@
+sudo get-apt update
+sudo get-apt install ufw
+sudo ufw enable
+sudo allow 22/tcp
+sudo allow 443/tcp
+sudo allow 80/tcp
+sudo service ufw restart
