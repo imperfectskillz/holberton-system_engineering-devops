@@ -1,7 +1,0 @@
-#!/usr/bin/env bash
-# domain info
-# shellcheck disable=SC2086
-if [ "$#" -eq 1 ]
-then
-    dig www."$1" | grep -A1 'ANSWER SECTION' | grep -e www | awk '{print "The subdomain www is a  " $4 "record and points to " $5}'
-fi
