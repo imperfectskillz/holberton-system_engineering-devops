@@ -1,0 +1,26 @@
+#!/usr/bin/python3
+"""
+retrieve data using API export in CSV
+"""
+import csv
+from sys import argv
+import requests
+
+
+if __name__ == "__main__":
+    """
+    exports CSV
+    """
+
+    url = "https://jsonplaceholder.typicode.com/users/{}".format(argv[1])
+    user = requests.get(url).json()
+    user_name = user.get("name")
+
+    tod = "https://jsonplaceholder.typicode.com/users/{}/todos".format(argv[1])
+    all = requests.get(tod).json()
+
+    with open("{}.csv".format(argv[1]), "w") as csvfile:
+        writer = csv.writer(csvfile, quoting=csv.QUOTE_ALL)
+        for one in all:
+            writer.writerow([argv[1], user_name, one.get("completed"),
+                             one.get("title")])
