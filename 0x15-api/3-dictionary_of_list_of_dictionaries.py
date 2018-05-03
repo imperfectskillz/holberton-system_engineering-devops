@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-retrieve data using API export in CSV
+exports data in JSON format
 """
 import json
 from sys import argv
@@ -9,7 +9,7 @@ import requests
 
 if __name__ == "__main__":
     """
-    exports CSV
+    exports in JSON
     """
 
     url = "https://jsonplaceholder.typicode.com/users"
@@ -18,11 +18,12 @@ if __name__ == "__main__":
     final_dict = {}
     for user in users:
         id = user.get("id")
-        all = requests.get("https://jsonplaceholder.typicode.com/users/{}/todos".format(id).json()
+        all = requests.get("{}/{}/todos".format(url, id).json()
 
         result = []
         for task in all:
-            result.append({'task': task.get('title'), 'completed': task.get('completed'), 'username': user.get("username")})
+            result.append({'task': task.get('title'), 'completed': task.get
+                           ('completed'), 'username': user.get('username')})
         final_dict[id] = result
 
     with open("todo_all_employees.json", "w") as file:
