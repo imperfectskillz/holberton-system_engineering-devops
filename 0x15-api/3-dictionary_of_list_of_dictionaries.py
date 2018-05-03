@@ -18,13 +18,11 @@ if __name__ == "__main__":
     final_dict = {}
     for user in users:
         id = user.get("id")
-        all = requests.get("{}/{}/todos".format(url, id).json()
-
+        all = requests.get("{}/{}/todos".format(url, id)).json()
         result = []
         for task in all:
             result.append({'task': task.get('title'), 'completed': task.get
                            ('completed'), 'username': user.get('username')})
         final_dict[id] = result
-
     with open("todo_all_employees.json", "w") as file:
         json.dump(final_dict, file)
