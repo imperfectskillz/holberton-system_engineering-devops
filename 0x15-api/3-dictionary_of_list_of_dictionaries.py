@@ -22,9 +22,7 @@ if __name__ == "__main__":
 
         result = []
         for task in all:
-            task_dict = {}
-            task_dict.append({'task': task.get('title'), 'completed': task.get('completed'), 'username': user.get("username")})
-            result.append(task_dict)
+            result.append({'task': task.get('title'), 'completed': task.get('completed'), 'username': user.get("username")})
         final_dict[id] = result
 
     with open("todo_all_employees.json", "w") as file:
