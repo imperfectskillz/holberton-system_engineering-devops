@@ -29,34 +29,34 @@ server {
 
        location / {
        		# First attempt to serve request as file, then
-		  # as directory, then fall back to displaying a 404.
-		    try_files $uri $uri/ =404;
-		    	      # Uncomment to enable naxsi on this location
-			      	# include /etc/nginx/naxsi.rules
-				}
+		# as directory, then fall back to displaying a 404.
+		try_files $uri $uri/ =404;
+		# Uncomment to enable naxsi on this location
+		# include /etc/nginx/naxsi.rules
+		}
 
-				location /redirect_me {
-					 return 301;
-					 }
+		location /redirect_me {
+			return 301;
+		}
 
-					 location /hbnb_static {
-					 	   alias /data/web_static/current;
-						   }
+		location /hbnb_static {
+			alias /data/web_static/current;
+		}
 
-						   location /airbnb-onepage/ {
-						   	     include proxy_params;
-							     	      proxy_pass http://0.0.0.0:8000/;
-								      }
+		location /airbnb-onepage/ {
+			 include proxy_params;
+			proxy_pass http://0.0.0.0:8000/;
+		      }
 
-								      location /airbnb-dynamic/ {
-								      	       include proxy_params;
-									       	       proxy_pass http://0.0.0.0:8001/;
-										       }
+	     location /airbnb-dynamic/ {
+	   	       include proxy_params;
+      	       proxy_pass http://0.0.0.0:8001/;
+	       }
 
-										       location /api/ {
-										       		include proxy_params;
-													proxy_pass http://0.0.0.0:8002;
-													}
+	       location /api/ {
+	       		include proxy_params;
+		proxy_pass http://0.0.0.0:8002;	
+		}
 
 
 }
